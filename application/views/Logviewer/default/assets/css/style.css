@@ -1,0 +1,163 @@
+@import url("?asset=css&file=normalize.css");
+@import url("?asset=css&file=grid.css");
+
+body{
+	font-size: 12px;
+	color: #333333;
+	background-color: #f5f5f5;
+	margin-bottom: 20px;
+}
+
+a{
+	color: #0099CC;
+	text-decoration: none;
+}
+a:hover{
+	color: #008CBB;
+}
+
+/************************ HEADER ************************/
+#header_container{
+	background: #3f3f3f; /* Old browsers */
+	background: -moz-linear-gradient(top, #3f3f3f 1%, #333333 97%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#3f3f3f), color-stop(97%,#333333)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #3f3f3f 1%,#333333 97%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #3f3f3f 1%,#333333 97%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #3f3f3f 1%,#333333 97%); /* IE10+ */
+	background: linear-gradient(to bottom, #3f3f3f 1%,#333333 97%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f3f3f', endColorstr='#333333',GradientType=0 ); /* IE6-9 */
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	overflow: hidden;
+	z-index: 100;
+	height: 50px;
+	-webkit-box-shadow:  0px 2px 3px 0px rgba(0, 0, 0, 0.3);
+	box-shadow:  0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+#header_container #logo{
+	margin: 0px;
+	line-height: 50px;
+	padding: 0px;
+	font-family:Arial, Helvetica, sans-serif;
+	color: #cccccc;
+}
+#header_container a{
+	color: #cccccc;
+}
+#header_container a:hover{
+	color: #ffffff;
+}
+#header_container #navigation{
+	margin: 0px;
+	line-height: 50px;
+	padding: 0px;
+	float: right;
+	list-style-type: none;
+}
+#header_container #navigation li{
+	float: left;
+	margin-top: 0;
+	margin-right: 1px;
+	margin-bottom: 0;
+	margin-left: 1px;
+	padding-top: 0;
+	padding-right: 20px;
+	padding-bottom: 0;
+	padding-left: 20px;
+}
+#header_container #navigation li:hover, #header_container #navigation li.active{
+	background:rgba(0,0,0,0.2);
+}
+#header_container #navigation li a{
+	display: block;
+	margin:0 -20px;
+	padding: 0 20px;
+}
+
+/************************ BODY ************************/
+#body_container{
+	margin-top: 70px;
+	min-height:400px;
+}
+#body_container #messages{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+#body_container #messages .message{
+	background-color: #FFFFFF;
+	border: thin solid #CCCCCC;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+	-webkit-box-shadow:  0px 2px 3px 0px rgba(0, 0, 0, 0.3);
+	box-shadow:  0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+	color: #FFFFFF;
+}
+#body_container #messages .message.error{
+	background-color: #ae4c4c;
+	border: thin solid #a24747;
+}
+#body_container #messages .message.debug{
+	background-color: #98b964;
+	border: thin solid #8cab5b;
+}
+#body_container #messages .message.info{
+	background-color: #649ab9;
+	border: thin solid #5c8fac;
+}
+#body_container #messages .message .left{
+	float: left;
+	width: 220px;
+	margin-right: 10px;
+}
+#body_container #messages .message .left .level{
+	background-image: url(?asset=img&file=level.png);
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-repeat: no-repeat;
+}
+
+#body_container #messages .message.error .left .level{
+	background-position: 0 0;
+}
+#body_container #messages .message.debug .left .level{
+	background-position: 0 -50px;
+}
+#body_container #messages .message.info .left .level{
+	background-position: 0 -100px;
+}
+#body_container #messages .message .left .date{
+	margin-left: 20px;
+	font-size: 11px;
+}
+#body_container #messages .message .right{
+	float: right;
+	width: 655px;
+	margin-left: 10px;
+}
+#body_container #messages .message .right .description{
+	font-family:'Bitstream Vera Sans Mono', Courier, monospace;
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+}
+
+/************************ FOOTER ************************/
+#footer_container{
+	margin-top: 30px;
+}
+#footer_container #copyright{
+
+}
