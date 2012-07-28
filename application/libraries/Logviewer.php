@@ -9,11 +9,11 @@
  * @copyright 2012 Wahyu Kristianto.
  * @license   MIT License http://www.opensource.org/licenses/mit-license.php
  * @version   Release: 1.0
- * @link      https://github.com/Kristories/Codeigniter-Log-Viewer-Library
+ * @link      https://github.com/kristories/codeigniter-logviewer-library
  */
 
-class Logviewer
-{
+class Logviewer {
+	
 	/**
 	 * CI instance.
 	 */
@@ -35,9 +35,10 @@ class Logviewer
 			$this->_ci = NULL;
 		}
 		
-		$this->_ci->load->helper(array('file'));
-		
-		
+		$this->_ci->load->helper(array(
+			'file',
+			'url'
+		));		
 	}
 
 	/**
@@ -84,6 +85,7 @@ class Logviewer
 	 * ------------------------------------------------------------------------------------------
 	 * @param  string $theme
 	 */
+	
 	function assets($theme)
 	{
 		$asset 	= $this->_ci->input->get('asset');
@@ -109,6 +111,7 @@ class Logviewer
 		}
 		
 		$file_info	= get_file_info($file);
+		
 		if(! $file_info)
 		{
 			show_404();
@@ -119,6 +122,35 @@ class Logviewer
 		echo read_file($file);
 		exit();
 	}
+	
+	/**
+	 * ------------------------------------------------------------------------------------------
+	 * Level
+	 * ------------------------------------------------------------------------------------------
+	 */
+	function level()
+	{
+		$level 	= $this->_ci->input->get('level');
+		
+		if($level == 'error')
+		{
+			$return = $this->data('error');
+		}
+		elseif($level == 'debug')
+		{
+			$return = $this->data('debug');
+		}
+		elseif($level == 'info')
+		{
+			$return = $this->data('info');
+		}
+		else
+		{
+			$return = $this->data();
+		}
+
+		return $return;
+	}	
 	
 	/**
 	 * ------------------------------------------------------------------------------------------
