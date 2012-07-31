@@ -12,7 +12,7 @@
 <div id="header_container">
 	<div class="container">
         <div class="grid_6">
-            <h1 id="logo"><a href="">Codeigniter Log Viewer</a></h1>
+            <h1 id="logo"><a href="<?php echo site_url(uri_string()); ?>">Codeigniter Log Viewer</a></h1>
         </div>
         <div class="grid_6">
             <ul id="navigation">
@@ -33,7 +33,6 @@
         </div>
     </div>
 </div>
-
 
 <div id="body_container">
 	<div class="container">
@@ -66,7 +65,6 @@
         </div>
     </div>
 </div>
-
 
 </body>
 </html>
