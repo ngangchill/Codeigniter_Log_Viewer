@@ -2,7 +2,9 @@
 <html>
 
 <head>
-<link href="<?php echo uri_string(); ?>?asset=css&file=style.css" rel="stylesheet" type="text/css" />
+<title>Log Viewer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<link href="<?php echo site_url(uri_string().'?asset=css&file=style.css'); ?>" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -68,15 +70,3 @@
 
 </body>
 </html>
-
-
-
-<?php /*foreach($messages as $message){ ?>
-            	<li class="grid_12 alpha omega">
-                	<div class="grid_3 alpha">
-						<a class="level"><?php echo $message[0]; ?></a>
-                        <div class="date"><?php echo $message[1]; ?></div>
-                  	</div>
-                    <div class="grid_9 omega"><?php echo $message[2]; ?></div>
-                </li>
-                <?php }*/ ?>
