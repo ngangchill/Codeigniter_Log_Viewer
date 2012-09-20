@@ -1,4 +1,4 @@
-#Codeigniter Log Viewer Library
+#Codeigniter Log Viewer
 
 http://uzaklab.com/codeigniter-log-viewer
 
